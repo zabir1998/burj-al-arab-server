@@ -11,6 +11,10 @@ require('dotenv').config()
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.dpuow.mongodb.net/burjAlArab?retryWrites=true&w=majority`;
 const port = 5000
 
+app.get('/',(req,res)=>{
+    res.send("db working")
+})
+
 const app = express()
 
 app.use(cors());
